@@ -6,5 +6,3 @@ urlpatterns = [
     path('', products),
     path('product/', product)
 ]
-
-
