@@ -132,3 +132,8 @@ dmypy.json
 .idea/
 idea/
 idea
+
+.media
+.midia/
+media/
+media

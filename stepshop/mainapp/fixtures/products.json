@@ -1,0 +1,62 @@
+[
+  {
+    "model": "mainapp.product",
+    "pk": 1,
+    "fields": {
+      "category": 1,
+      "name": "Super Jeans",
+      "image": "product_image/big-01.jpg",
+      "short_desc": "Super Pupper Jeans",
+      "description": "Super Pupper Mega Ultra Jeans",
+      "price": "12000.00",
+      "quantity": 5,
+      "created_at": "2022-06-01T11:40:42.161Z",
+      "updated_at": "2022-06-01T11:40:42.161Z"
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 2,
+    "fields": {
+      "category": 2,
+      "name": "Niker Air Jordan",
+      "image": "product_image/3674f87d-6fea-4b16-877f-8bf3a4ef18bd.jpg",
+      "short_desc": "Super Pupper Nike",
+      "description": "Кроссовки Air Jordan 4 SP 'Off-Noir' из коллаборации с Union от Jordan. Закругленный носок, плоская резиновая подошва, застежка на шнуровке и фирменная стелька. Этот товар представлен на Stadium Goods — маркетплейсе, где можно найти самые редкие модели кроссовок и вещи из последних коллабораций. О подлинности можно не беспокоиться — все товары проходят проверку перед размещением на сайте. .",
+      "price": "600000.00",
+      "quantity": 10,
+      "created_at": "2022-06-01T11:42:49.577Z",
+      "updated_at": "2022-06-01T11:42:49.577Z"
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 3,
+    "fields": {
+      "category": 2,
+      "name": "Niker Air Jordan 2",
+      "image": "product_image/3674f87d-6fea-4b16-877f-8bf3a4ef18bd.jpg",
+      "short_desc": "Niker Air Jordan 2",
+      "description": "Niker Air Jordan 2",
+      "price": "10000.00",
+      "quantity": 10,
+      "created_at": "2022-06-02T09:22:14.871Z",
+      "updated_at": "2022-06-02T09:22:14.871Z"
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 4,
+    "fields": {
+      "category": 2,
+      "name": "Very Cool Snikers",
+      "image": "product_image/product-04.jpg",
+      "short_desc": "Cool Snikers",
+      "description": "",
+      "price": "6000.00",
+      "quantity": 10,
+      "created_at": "2022-06-02T09:48:02.379Z",
+      "updated_at": "2022-06-02T09:48:02.379Z"
+    }
+  }
+]

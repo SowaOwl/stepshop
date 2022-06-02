@@ -1,0 +1,26 @@
+[
+  {
+    "model": "ma`inapp.productcategory",
+    "pk": 1,
+    "fields": {
+      "name": "Jeans",
+      "description": ""
+    }
+  },
+  {
+    "model": "mainapp.productcategory",
+    "pk": 2,
+    "fields": {
+      "name": "Snikers",
+      "description": ""
+    }
+  },
+  {
+    "model": "mainapp.productcategory",
+    "pk": 3,
+    "fields": {
+      "name": "Beavers",
+      "description": ""
+    }
+  }
+]
