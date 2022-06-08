@@ -1,0 +1,50 @@
+{% extends '../base.html' %}
+{% load static %}
+
+{% block title %}{{title|title}}{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <h4>Registration</h4>
+        <div class="mx-auto col-3">
+            <form class="form-horizontal" action="{% url 'auth:register' %}" style="text-align:center" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div>
+                    <label>Login:</label>
+                    {{ register_form.username }}
+                </div>
+                <div>
+                    <label>Name:</label>
+                    {{ register_form.first_name }}
+                </div>
+                <div>
+                    <label>Age:</label>
+                    {{ register_form.age }}
+                </div>
+                <div>
+                    <label>Password:</label>
+                    {{ register_form.password1 }}
+                </div>
+                <div>
+                    <label>Confirm Password:</label>
+                    {{ register_form.password2 }}
+                </div>
+                <div>
+                    <label>Email:</label>
+                    {{ register_form.email }}
+                </div>
+                <div>
+                    <label>Avatar:</label>
+                    {{ register_form.avatar }}
+                </div>
+                <br>
+                <button type="submit" class="btn btn-primary">Registration</button>
+            </form>
+        </div>
+    </div>
+
+
+
+</div>
+{% endblock %}

@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="{% static 'assets/css/fontawesome.css' %}">
     <link rel="stylesheet" href="{% static 'assets/css/tooplate-main.css' %}">
     <link rel="stylesheet" href="{% static 'assets/css/owl.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
 </head>
 
 <body>
@@ -32,18 +33,12 @@
         <div class="row">
             <div class="col-md-12">
             <span>
-<!--                {{user.username|title}}-->
-                <!--                {{user.first_name|title}}-->
-                <!--                <br>-->
-                <!--                {{user.is_active}}-->
-                <!--                <br>-->
-                <!--                {{user.date_joined|date:"d m Y"}}-->
-
               {% if user.is_authenticated%}
                 {{user.username}}
-              {% else %}
-                <a href="/admin/login">Say hello to my little friend </a>
-              {% endif %}
+                <a href="{% url 'auth:logout' %}">| Exit</a>
+                {% else %}
+                    <a href="{% url 'auth:login' %}">Enter</a>
+                {% endif %}
 
             </span>
             </div>
