@@ -11,7 +11,7 @@ links_menu = [
 
 
 def products(request):
-    products_ = Product.objects.all()
+    products_ = Product.objects.all().order_by('price')
     categories = ProductCategory.objects.all()
 
     context = {

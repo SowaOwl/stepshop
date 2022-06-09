@@ -13,26 +13,32 @@
                 <div>
                     <label>Login:</label>
                     {{ register_form.username }}
+                    {{ register_form.error.username }}
                 </div>
                 <div>
                     <label>Name:</label>
                     {{ register_form.first_name }}
+                    {{ register_form.error.first_name }}
                 </div>
                 <div>
-                    <label>Age:</label>
+                    <label for="age">Age:</label>
                     {{ register_form.age }}
+                    {{ register_form.error.age }}
                 </div>
                 <div>
                     <label>Password:</label>
                     {{ register_form.password1 }}
+                    {{ register_form.error.password1 }}
                 </div>
                 <div>
                     <label>Confirm Password:</label>
                     {{ register_form.password2 }}
+                    {{ register_form.error.password1 }}
                 </div>
                 <div>
                     <label>Email:</label>
                     {{ register_form.email }}
+                    {{ register_form.error.email }}
                 </div>
                 <div>
                     <label>Avatar:</label>
@@ -43,8 +49,5 @@
             </form>
         </div>
     </div>
-
-
-
 </div>
 {% endblock %}
