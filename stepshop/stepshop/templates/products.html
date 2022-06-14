@@ -11,7 +11,7 @@
     <div class="row posts">
         {% for product in products %}
         <div id="{{product.id}}" class="item new col-md-4">
-            <a href="#">
+            <a href="{% url 'basket:add' product.pk %}">
                 <div class="featured-item">
                     <img src="/media/{{ product.image }}" alt="{{ product.name }}">
                     <h4>{{ product.name }}</h4>
