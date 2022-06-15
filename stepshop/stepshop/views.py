@@ -1,5 +1,6 @@
 from django.shortcuts import render
 
+from basketapp.models import Basket
 from mainapp.models import Product, ProductCategory
 
 links_menu = [
@@ -14,11 +15,17 @@ def index(request):
     products_ = Product.objects.all()
     categories = ProductCategory.objects.all()
 
+    basket = []
+
+    if request.user.is_authenticated:
+        basket = Basket.objects.filter(user=request.user)
+
     context = {
         'title': 'main page',
         'links_menu': links_menu,
         'products': products_,
         'categories': categories,
+        'basket': basket,
     }
 
     return render(request, 'index.html', context)
