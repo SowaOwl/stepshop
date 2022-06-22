@@ -38,7 +38,7 @@ def login(request):
         'title': title,
         'login_form': login_form,
         'next': _next,
-        'links_menu': links_menu,   
+        'links_menu': links_menu,
     }
 
     return render(request, 'authapp/login.html', context)
