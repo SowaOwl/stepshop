@@ -12,8 +12,16 @@ def basket(request):
     if request.user.is_authenticated:
         basket_ = Basket.objects.filter(user=request.user)
 
+        links_menu = [
+            {'href': 'index', 'name': 'Домой', 'route': ''},
+            {'href': 'products:index', 'name': 'Продукты', 'route': 'products/'},
+            {'href': 'about', 'name': 'О&nbsp;нас', 'route': 'about/'},
+            {'href': 'contacts', 'name': 'Контакты', 'route': 'contacts/'},
+        ]
+
         context = {
             'basket': basket_,
+            'links_menu': links_menu,
         }
 
         return render(request, 'basketapp/basket.html', context)

@@ -27,10 +27,18 @@ def login(request):
 
             return HttpResponseRedirect(reverse('index'))
 
+    links_menu = [
+        {'href': 'index', 'name': 'Домой', 'route': ''},
+        {'href': 'products:index', 'name': 'Продукты', 'route': 'products/'},
+        {'href': 'about', 'name': 'О&nbsp;нас', 'route': 'about/'},
+        {'href': 'contacts', 'name': 'Контакты', 'route': 'contacts/'},
+    ]
+
     context = {
         'title': title,
         'login_form': login_form,
         'next': _next,
+        'links_menu': links_menu,   
     }
 
     return render(request, 'authapp/login.html', context)
