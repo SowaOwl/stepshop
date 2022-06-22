@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    {{ title|capfirst }}
+{% endblock %}
+
+{% block content %}
+    <!-- Page Content -->
+    <!-- Single Starts Here -->
+    <div class="single-product">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-heading">
+              <div class="line-dec"></div>
+              <h1>{{ product.name }}</h1>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <img src="/media/{{ product.image }}" alt="{{ product.name }}" class="w-100">
+          </div>
+          <div class="col-md-6">
+            <div class="right-content">
+              <h4>{{ product.name }}</h4>
+              <h6>${{ product.price|floatformat:"g" }}</h6>
+              <p>{{ product.description }}</p>
+              <span>На складе: {{ product.quantity }}</span>
+
+              <button type="button" class="button">
+                <a href="{% url 'basket:add' product.pk %}" class="text-light">Заказать</a>
+              </button>
+
+              <div class="down-content">
+                <div class="categories">
+                  <h6>Категория: <span>
+                    <a href="{% url 'products:category' product.category.pk %}">{{ product.category }}</a>
+                  </span></h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Single Page Ends Here -->
+
+
+    {% if same_products %}
+    <!-- Similar Starts Here -->
+    <div class="featured-items">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-heading">
+              <div class="line-dec"></div>
+              <h1>Похожие предложения</h1>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="owl-carousel owl-theme">
+
+              {% for product in same_products %}
+              <a href="{% url 'products:product' product.pk %}">
+                <div class="featured-item">
+                  <img src="/media/{{ product.image }}" alt="{{ product.name }}">
+                  <h4>{{ product.name }}</h4>
+                  <h6>${{ product.price|floatformat:"g" }}</h6>
+                </div>
+              </a>
+              {% endfor %}
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Similar Ends Here -->
+    {% endif %}
+{% endblock %}
